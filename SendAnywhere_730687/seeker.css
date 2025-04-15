@@ -1,0 +1,96 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('back.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #000; /* Changed to black */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Auth container styles */
+.auth-container {
+    width: 60%;
+    max-width: 800px;
+    padding: 40px;
+    margin: 80px auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.auth-container h1 {
+    margin-bottom: 20px;
+    color: #000; /* Ensure header text is black */
+    font-size: 28px;
+}
+
+/* General styles for the ride container */
+.ride-container {
+    display: flex;               /* Use flexbox for layout */
+    flex-wrap: wrap;            /* Allow items to wrap to the next line */
+    gap: 20px;                  /* Space between rides */
+    justify-content: center;     /* Center the rides */
+}
+
+/* Individual ride styles */
+.ride {
+    flex: 0 1 calc(30% - 20px); /* Set width to approximately 30% of container minus gap */
+    box-sizing: border-box;      /* Ensure padding and border are included in width */
+    border: 1px solid #ccc;      /* Border around each ride */
+    border-radius: 5px;          /* Rounded corners */
+    padding: 10px;               /* Padding inside each ride */
+    background-color: #fff;      /* White background for rides */
+    transition: transform 0.2s;  /* Smooth scaling effect */
+}
+
+.ride:hover {
+    transform: scale(1.05);      /* Scale up on hover */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}

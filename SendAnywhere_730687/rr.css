@@ -1,0 +1,220 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /* font-family: Arial, sans-serif; */
+    font-family: 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('gro.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* Full height */
+    padding: 100px 20px; /* Space for header & footer */
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: transparent;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for horizontal alignment */
+    gap: 10px; /* Space between buttons */
+}
+
+nav a {
+    padding: 10px 20px; /* Padding for buttons */
+    background: red; /* Red background */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s ease-in-out, background 0.3s ease; /* Smooth transition for transform and background */
+    z-index: 2; /* Ensure buttons appear above other content */
+    position: relative; /* Ensure proper positioning */
+}
+
+/* Hover effect for navbar buttons */
+nav a:hover {
+    background: skyblue; /* Sky blue on hover */
+    transform: scale(1.2); /* Enlarge the button */
+    z-index: 3; /* Hover state z-index */
+}
+
+/* Active state to prevent scaling glitch on click */
+nav a:active {
+    transform: scale(1); /* Reset scale on click */
+}
+
+/* Main content styling */
+.auth-container {
+    width: 60%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 12px rgba(96, 57, 57, 0.2);
+    text-align: center;
+    padding: 40px;
+    overflow-y: auto;
+    border-radius: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input and select styling */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid red; /* Red border */
+    border-radius: 10px; /* Rounded corners */
+    transition: border 0.3s, box-shadow 0.3s; /* Transition for border and shadow */
+}
+
+input:focus, select:focus {
+    border-color: skyblue; /* Sky blue border on focus */
+    box-shadow: 0 0 5px skyblue; /* Add a subtle glow effect */
+}
+
+/* Custom file upload button styling */
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    background: red; /* Red background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.3s; /* Smooth transition for background and transform */
+    text-align: center; /* Center text */
+}
+
+/* Hover effect for custom file upload button */
+.custom-file-upload:hover {
+    background: skyblue; /* Sky blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Submit button styling */
+button {
+    padding: 10px 20px;
+    background: red; /* Red background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: skyblue; /* Sky blue on hover */
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    background: linear-gradient(90deg, #3498db, #8e44ad);
+    color: white;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffeb3b;
+}
+
+.hamburger {
+    display: none; /* Initially hidden */
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #fff;
+    z-index: 1001;
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Floating position on the right */
+}
+
+.hamburger div {
+    width: 35px;
+    height: 4px;
+    margin: 6px 0;
+    background-color: #fff;
+    transition: 0.4s;
+}
+
+.hamburger.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}

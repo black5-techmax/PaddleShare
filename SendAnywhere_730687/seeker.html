@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seeker - Transportation & Carpooling System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Pool Buddy">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="rider.html">Rider</a></li>
+                <li><a href="account.html">My Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <h1>Find a Ride</h1>
+            <form id="searchForm" onsubmit="return findRides(event);">
+                <label for="source">Source:</label>
+                <input type="text" id="source" name="source" required>
+
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+                <br>
+                <!-- <button type="submit">Search Rides</button> -->
+                <button type="submit" name="submit" style="padding: 12px 25px; margin: 10px; border: none; background: #e74c3c; color: #fff; cursor: pointer; border-radius: 5px; font-size: 18px; transition: background-color 0.3s, transform 0.2s; width: 80%;">Search Rides</button>
+            </form>
+        </div>
+        <div class="auth-container">
+            <h1>All Available Rides</h1>  
+            <div id="allRides" class="ride-container"></div>
+        </div>
+        <div class="auth-container">
+            <h1>My Rides</h1>
+            <div id="availableRides" class="ride-container"></div>
+        </div>
+        
+        <div id="map" style="height: 400px; display: none;"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Transportation & Carpooling System</p>
+    </footer>
+
+    <script src="seeker.js"></script>
+</body>
+</html>

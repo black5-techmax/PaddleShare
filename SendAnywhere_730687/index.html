@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-site-verification"
+      content="vfpsmFrWOjQTtnjQ7aZ7l6hXtDiMM-otn6fLUPgWs1U"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <title>Paddle-Share: Home</title>
+    <link rel="stylesheet" href="styles1.css" />
+    <link rel="stylesheet" href="cb.css" />
+    <script src="location.js"></script>
+    <link rel="icon" type="image/x-icon" href="logo.ico" />
+  </head>
+
+  <body>
+    <!-- <header>
+      <div class="logo">
+        <img src="logo.png" alt="Pool Buddy" />
+      </div>
+      <h1 class="header-title">Paddle-Share</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header> -->
+
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="Logo" />
+      </div>
+      <button class="hamburger" id="hamburgerIcon">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+
+      <nav>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    
+    <div class="chat-icon1" id="chat-icon" onclick="toggleChat()">
+      <span>💬</span>
+    </div>
+    <div class="chat-container1" id="chat-container">
+      <div class="chat-box1" id="chat-box"></div>
+      <center>
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Chat Here..."
+          onkeydown="if(event.key === 'Enter'){sendMessage()}"
+          style="width: 80%"
+        />
+
+        <button onclick="sendMessage()" style="width: 40%" class="button1">
+          Send
+        </button>
+      </center>
+    </div>
+
+
+    <main>
+      <div class="welcome-container">
+        <h2>Welcome to the Paddle-Share</h2>
+        <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; padding-top: 15px; padding-bottom: 15px;">
+          Carpooling offers significant economic benefits by sharing commuting
+          costs like fuel and parking. Environmentally, it reduces traffic
+          congestion and carbon emissions, contributing to cleaner air.
+          Socially, it can foster connections among commuters, making journeys
+          less isolating.
+        </p>
+        <button onclick="window.location.href='login.php'">Login</button>
+        <button onclick="window.location.href='register.php'">Register</button>
+      </div>
+
+      <!-- Popular Rides Section-->
+      <div class="slider">
+        <div class="title">
+          <h1><u>Popular Rides</u></h1>
+        </div>
+        <div class="content">
+          <div class="s1">
+            <div class="img1">
+              <img src="pune.jpeg" alt="img1" />
+            </div>
+            <h4
+              style="
+                padding-top: 8px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              "
+            >
+              Pune
+            </h4>
+            <br /><br />
+          </div>
+
+          <div class="s2">
+            <div class="img2">
+              <img src="hyd.jpeg" alt="img2" />
+            </div>
+            <h4
+              style="
+                padding-top: 8px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              "
+            >
+              Hyderabad
+            </h4>
+            <br /><br />
+          </div>
+
+          <div class="s3">
+            <div class="img3">
+              <img src="viz.jpeg" alt="img3" />
+            </div>
+            <h4
+              style="
+                padding-top: 8px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              "
+            >
+              Vizag
+            </h4>
+            <br /><br />
+          </div>
+
+          <div class="s4">
+            <div class="img4">
+              <img src="leh.jpeg" alt="img4" />
+            </div>
+            <h4
+              style="
+                padding-top: 8px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              "
+            >
+              Leh
+            </h4>
+            <br /><br />
+          </div>
+        </div>
+      </div>
+      <br /><br />
+
+      <!-- Review section...-->
+
+      <div class="review">
+        <div class="title">
+          <h1><u>Public Reviews</u></h1>
+        </div>
+        <br />
+        <div class="contentr">
+          <div class="r1">
+            <h3
+              style="
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              "
+            >
+              Review-1 <br />
+            </h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star unchecked"></span><br /><br />
+            <p style="padding-left: 15px; font-weight: 900">
+              Great app—easy to use, reliable drivers, eco-friendly. One GPS
+              glitch delayed pickup, otherwise a smooth and cost-effective
+              experience! <br /><br />
+              -John
+            </p>
+          </div>
+
+          <hr class="fancy" />
+
+          <div class="r2">
+            <h3
+              style="
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              "
+            >
+              Review-2 <br />
+            </h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star-half-alt checked"></span><br /><br />
+            <p style="padding-left: 10px; font-weight: 900">
+              Seamless and smart, the carpool system transforms commutes. Less
+              stress, lower costs, and great company—makes every ride smoother
+              and greener. Truly a game-changer. <br /><br />
+              -Rahul
+            </p>
+          </div>
+
+          <hr class="fancy" />
+
+          <div class="r3">
+            <h3
+              style="
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              "
+            >
+              Review-3
+            </h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span><br /><br />
+            <p style="padding-left: 10px; font-weight: 900">
+              Excellent carpool system! Drivers are punctual and friendly, rides
+              are smooth, booking is easy, and the app is intuitive. Saves time,
+              money, and the planet!<br /><br />
+              -Sham
+            </p>
+          </div>
+
+          <hr class="fancy" />
+
+          <div class="r4">
+            <h3
+              style="
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              "
+            >
+              Review-4
+            </h3>
+
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star unchecked"></span><br /><br />
+            <p style="padding-left: 10px; font-weight: 900">
+              This carpool system is great for saving money and making commutes
+              social! Matching isn't always perfect, but overall it's convenient
+              and safe.<br /><br />
+              -Rohan
+            </p>
+          </div>
+
+          <hr class="fancy" />
+
+          <div class="r5">
+            <h3
+              style="
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              "
+            >
+              Review-5
+            </h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star-half-alt checked"></span>
+            <span class="fa fa-star unchecked"></span><br /><br />
+            <p style="padding-right: 10px; font-weight: 900;">
+              This carpool app is mostly good, making travel cheaper and
+              sometimes social. Ride matching can be a bit off, and better
+              coordination tools would help.<br /><br />
+              -Lakshmi
+            </p>
+          </div>
+        </div>
+      </div>
+    <!-- <footer> -->
+    <!-- <div class="copyright">
+        <p>&copy; 2025 Carpool System. All rights reserved.</p>
+      </div> -->
+    </main>
+    <div class="foot">
+      <a href="https://www.facebook.com/" class="fab fa-facebook" target="_blank" aria-label="Facebook"></a>
+      <a href="https://www.linkedin.com/" class="fab fa-linkedin" target="_blank" aria-label="LinkedIn"></a>
+      <a href="https://www.instagram.com/" class="fab fa-instagram" target="_blank" aria-label="Instagram"></a>
+      <a href="https://wa.me/" class="fab fa-whatsapp" target="_blank" aria-label="WhatsApp"></a>
+    </div>
+    <!-- </footer> -->
+  </body>
+</html>
+
+<script src="cbb.js"></script>
+
+<script>
+  // Get the hamburger icon and menu
+  const hamburgerIcon = document.getElementById("hamburgerIcon");
+  const navMenu = document.querySelector("nav ul");
+
+  // Add click event to toggle menu visibility
+  hamburgerIcon.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    hamburgerIcon.classList.toggle("active");
+  });
+</script>
